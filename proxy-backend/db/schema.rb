@@ -56,15 +56,10 @@ ActiveRecord::Schema.define(version: 20150628011705) do
     t.datetime "updated_at",                               null: false
     t.boolean  "banned",      limit: 1,   default: false
     t.datetime "banned_time"
-    t.integer  "in_use",      limit: 4,   default: 0
     t.string   "country",     limit: 255
+    t.integer  "in_use",      limit: 4,   default: 0
   end
 
   add_index "proxy_domains", ["proxy"], name: "index_proxy_domains_on_proxy", unique: true, using: :btree
-
-  create_table "whats", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
 
 end

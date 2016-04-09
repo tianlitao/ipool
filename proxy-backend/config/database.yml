@@ -16,7 +16,7 @@ development:
   database: ipool
   pool: 5
   username: root
-  password: lsm123
+  password:
   host: localhost
 
 test:
